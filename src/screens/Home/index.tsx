@@ -16,8 +16,11 @@ export default function Home() {
   const [participantName, setParticipantName] = useState<string>("");
 
   const handleAddParticipant = () => {
-    if (participants.includes(participantName)) {
-      return Alert.alert("Erro!", "Participante já registrado!");
+    if (participants.includes(participantName) || participantName === "") {
+      return Alert.alert(
+        "Erro!",
+        "Participante já registrado ou nome invalido!"
+      );
     }
     setParticipants((prevState) => [...prevState, participantName]);
     setParticipantName("");
