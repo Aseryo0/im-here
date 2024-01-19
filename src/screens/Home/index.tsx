@@ -29,6 +29,9 @@ export default function Home() {
         text: "sim",
         onPress: () => {
           if (participants.includes(name)) {
+            setParticipants((index) =>
+              index.filter((participant) => participant !== name)
+            );
             console.log("Participante removido!");
           }
         },
