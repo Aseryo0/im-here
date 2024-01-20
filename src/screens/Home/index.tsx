@@ -35,7 +35,6 @@ export default function Home() {
             setParticipants((index) =>
               index.filter((participant) => participant !== name)
             );
-            console.log("Participante removido!");
           }
         },
       },
